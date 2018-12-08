@@ -21,6 +21,9 @@ public class Shipwreck {
         this.yearDiscovered = yearDiscovered;
     }
 
+    public Shipwreck() {
+    }
+
     public Long getId() {
         return id;
     }
