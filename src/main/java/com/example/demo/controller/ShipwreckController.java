@@ -12,13 +12,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("api/v1/")
 public class ShipwreckController {
-    private final ShipwreckRepository shipwreckRepository;
-
     @Autowired
-    public ShipwreckController(ShipwreckRepository shipwreckRepository) {
-        this.shipwreckRepository = shipwreckRepository;
-    }
-
+    private ShipwreckRepository shipwreckRepository;
     @RequestMapping(value = "shipwrecks", method = RequestMethod.GET)
         public List<Shipwreck> list(){
             return shipwreckRepository.findAll();
